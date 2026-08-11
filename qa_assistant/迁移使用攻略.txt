@@ -1,0 +1,8 @@
+1. 装 Python 到 python.org 下载并安装 Python 3.10+，安装时勾选 "Add to PATH"。
+
+2. 拷贝整个项目文件夹 把 qa_assistant\ 整个文件夹（含 knowledge\ 题库、BAT、脚本）复制到新电脑任意位置（路径随意，建议不含中文/空格，如 C:\qa_assistant）。
+
+3. 安装依赖 在该文件夹内打开命令行运行：
+
+pip install -r requirements.txt
+4. 完成 双击 启动答题助手.bat 或 截图监控.bat 即可。RapidOCR 模型已打包在库内，无需联网下载。

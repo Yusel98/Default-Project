@@ -1,0 +1,10 @@
+# OCR/图像采集/检索 依赖
+mss>=9.0
+opencv-python>=4.8
+numpy>=1.24
+Pillow>=10.0
+rapidocr>=2.0
+onnxruntime>=1.19
+# 可选：若不用 rapidocr，也可改用
+# paddleocr paddlepaddle   (CPU 较慢)
+# pytesseract              (需另装 Tesseract-OCR)
