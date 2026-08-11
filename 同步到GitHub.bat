@@ -2,33 +2,33 @@
 chcp 936 >nul
 cd /d "%~dp0"
 
-echo === Git 自动同步脚本 ===
+echo === Git auto sync ===
 echo.
 
 git add -A
 if errorlevel 1 (
-    echo [错误] git add 失败
+    echo [ERROR] git add failed
     pause
     exit /b 1
 )
 
-set /p msg=请输入提交说明（直接回车用默认说明）:
+set /p msg=Enter commit message (Enter for default): 
 if "%msg%"=="" set msg=auto commit
 
 git commit -m "%msg%"
 if errorlevel 1 (
-    echo [提示] 没有需要提交的更改，或提交失败
+    echo [INFO] nothing to commit
     goto :push
 )
 
 :push
 git push
 if errorlevel 1 (
-    echo [错误] 推送失败，请检查网络
+    echo [ERROR] push failed
     pause
     exit /b 1
 )
 
 echo.
-echo === 同步完成 ===
+echo === sync done ===
 pause
